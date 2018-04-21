@@ -11,8 +11,8 @@ VOLUME /tmp
 # Add the application's jar to the container
 ADD employee-zull-service-0.0.1-SNAPSHOT.jar employee-zull-service.jar
 
-#RUN bash -c 'touch /employee-zull-service.jar'
+RUN bash -c 'touch /employee-zull-service.jar'
 # Run the jar file 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/employee-zull-service.jar"]
 
-EXPOSE 8079
+EXPOSE 8080
